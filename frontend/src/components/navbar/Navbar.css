@@ -1,0 +1,52 @@
+.navbar {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--darkest);
+}
+
+.header {
+    padding: 0em;
+    margin: .40em;
+    font-size: 1.80rem;
+    color: var(--lighter);
+}
+
+.tab {
+    height: 55px;
+    margin: 0px 2px;
+    padding: 0px 15px;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: var(--mid);
+    background-color: var(--lightest);
+}
+
+.tab:hover {
+    cursor: pointer;
+    background-color: var(--darker);
+    color: var(--lightest);
+}
+
+.active {
+    border-bottom: 1px solid white;
+    background-color: white !important;
+    color: var(--darkest) !important;
+    border-left: 1px solid;
+    border-right: 1px solid;
+}
+
+.bar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}

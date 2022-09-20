@@ -1,0 +1,4 @@
+(1) X Arduino MEGA2560
+(3) X Male / Male Jumper Wires
+(1) X Breadboard
+(1) X DHT11 Temperature and Humidity Sensor

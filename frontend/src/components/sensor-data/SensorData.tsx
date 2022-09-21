@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { io } from 'socket.io-client';
+import { ISensorDataProps } from "../../App";
 import LiveGraph from "./LiveGraph";
+import "./SensorData.css";
 
 const socket = io('http://localhost:3000', {
     transports: ['websocket', 'polling']
@@ -14,9 +16,9 @@ export type GraphDataPoint = {
 export interface IGraphProps {
     data: GraphDataPoint[]
     graphName: string
-}
+};
 
-const LocalWeather = () => {
+const SensorData: React.FC<ISensorDataProps> = ({ sensorDataAvailable }) => {
     const [tempData, setTempData] = useState<GraphDataPoint[]>([]);
     const [humidityData, setHumidityData] = useState<GraphDataPoint[]>([]);
     const [currentTime, setCurrentTime] = useState<string>("");
@@ -36,7 +38,7 @@ const LocalWeather = () => {
     useEffect(() => {
         socket.on('current_temp', (currentTemp) => {
             getCurrentTime();
-            let newTempDataPoint: GraphDataPoint = {time: currentTime, value: currentTemp};
+            let newTempDataPoint: GraphDataPoint = { time: currentTime, value: currentTemp };
             if (tempData.length >= maxDataCount) {
                 let copiedTempData = Array.from(tempData);
                 copiedTempData.shift();
@@ -47,17 +49,31 @@ const LocalWeather = () => {
 
         socket.on('current_humidity', (currentHumidity) => {
             getCurrentTime();
-            let newHumidityDataPoint: GraphDataPoint = {time: currentTime, value: currentHumidity};
+            let newHumidityDataPoint: GraphDataPoint = { time: currentTime, value: currentHumidity };
             setHumidityData(currentHumidityData => [...currentHumidityData, newHumidityDataPoint]);
         });
     }, []);
 
+    const getSensorData = () => {
+        if (sensorDataAvailable) {
+            return (
+                <div>
+                    <LiveGraph data={tempData} graphName="Temperature (°C)" />
+                    <LiveGraph data={humidityData} graphName="Humidity (%)" />
+                </div>
+            )
+        } else {
+            return (
+                <h1 className="no_data_header">Sensor data not available for this location</h1>
+            )
+        }
+    };
+
     return (
         <div>
-            <LiveGraph data={tempData} graphName="Temperature (°C)"/>
-            <LiveGraph data={humidityData} graphName="Humidity (%)"/>
+            {getSensorData()}
         </div>
     )
 }
 
-export default LocalWeather;
+export default SensorData;

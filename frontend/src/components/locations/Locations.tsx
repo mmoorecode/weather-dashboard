@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import LocationDataTable from "./LocationDataTable";
 import locationData from "../../data/location_data.json";
+import { ILocationProps } from "../../App";
 
-const Locations = () => {
+const Locations: React.FC<ILocationProps> = ({selectedCity, setSelectedCity}) => {
 
     const [filteredLocationData, setFilteredLocationData] = useState(locationData);
     const [showOnlyLocWithSensorData, setShowOnlyLocWithSensorData] = useState(true);
@@ -27,7 +28,7 @@ const Locations = () => {
                     onChange={checkboxChangeHandler} />
                 <label>Show Only Locations With Available Sensor Data</label>
             </div>
-            <LocationDataTable data={filteredLocationData} />
+            <LocationDataTable data={filteredLocationData} selectedCity={selectedCity} setSelectedCity={setSelectedCity}/>
         </div>
     )
 }

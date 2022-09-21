@@ -14,3 +14,6 @@ rather than loaded all at once at runtime
 - Add more options for viewing the data (i.e. add option to view data for a given timespan,
 add dropdown to change the interval/count of tick marks on the x axis)
 - Add more comprehensive test coverage
+- Add ability to append location data to the table
+- Move arduino/websocket connection handling into its own utility class
+- Improve styling for the sensor availability checkbox under the Locations tab

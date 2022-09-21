@@ -11,7 +11,7 @@ const TABS = [
     { 'id': LOCATIONS_TAB_ID, 'display': 'Locations', 'component_id': 'locations' }
 ]
 
-const Navbar: React.FC<IProps> = ({ activeTab, activeTabHandler, currentLocationName, currentLocationLat, currentLocationLon }) => {
+const Navbar: React.FC<IProps> = ({ activeTab, activeTabHandler, currentLocationName, currentLocationState, currentLocationLat, currentLocationLon }) => {
 
     const [renderedTabs, setRenderedTabs] = useState<React.ReactElement[]>();
 
@@ -42,7 +42,7 @@ const Navbar: React.FC<IProps> = ({ activeTab, activeTabHandler, currentLocation
             <div className="bar">
                 <div className="vertical_align">
                     <h3 className="header">Weather Dashboard</h3>
-                    <h2 className="subheader">{currentLocationName} ({currentLocationLat}, {currentLocationLon})</h2>
+                    <h2 className="subheader">{currentLocationName}, {currentLocationState} ({currentLocationLat}, {currentLocationLon})</h2>
                 </div>
                 {renderedTabs}
             </div>

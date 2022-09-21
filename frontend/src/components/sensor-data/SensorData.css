@@ -1,0 +1,8 @@
+.no_data_header {
+    padding: 10em;
+    margin: .40em;
+    margin-bottom: .20em;
+    font-size: 1.80rem;
+    color: red;
+    text-align:center;
+}

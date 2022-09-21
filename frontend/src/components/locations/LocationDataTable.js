@@ -1,40 +1,48 @@
-import React from "react";
-import DataTable from 'react-data-table-component';
+import React, { useMemo, useState } from 'react';
+import MaterialReactTable from 'material-react-table';
 
-const LocationDataTable = ({data}) => {
-  const columns = [
+const LocationDataTable = ({ data, selectedCity, setSelectedCity }) => {
+  
+  
+  const columns = useMemo(() => [
     {
-      name: 'City',
-      selector: 'city',
-      sortable: true,
+      header: 'City',
+      accessorKey: 'city',
     },
     {
-      name: 'State',
-      selector: 'state',
-      sortable: true,
+      header: 'State',
+      accessorKey: 'state',
     },
     {
-      name: 'Latitude',
-      selector: 'latitude',
-      sortable: true,
+      header: 'Latitude',
+      accessorKey: 'latitude',
     },
     {
-      name: 'Longitude',
-      selector: 'longitude',
-      sortable: true,
+      header: 'Longitude',
+      accessorKey: 'longitude',
     }
-  ];
+  ], []);
+
+
+  const handleCitySelectionChange = (currentSelect, allSelected) => {
+    const result = allSelected.map(item => { return data.at(item.index) });
+    const selectedIds = result.map(item => {
+         return item.id;
+    }); 
+    console.log(selectedIds); 
+  }
+
   return (
-    <div>
-      <DataTable
-        columns={columns}
-        data={data}
-        pagination
-        highlightOnHover
-        selectableRows
-      />
-    </div>
-  )
+    <MaterialReactTable
+      columns={columns}
+      data={data}
+      enableMultiRowSelection={false} //use radio buttons instead of checkboxes
+      enableRowSelection
+      options={{selection: true}}
+      getRowId={(row) => row.userId} //give each row a more useful id
+      //onRowSelectionChange={handleCitySelectionChange} //TODO: figure out why this does not work
+    />
+  );
 }
 
 export default LocationDataTable;

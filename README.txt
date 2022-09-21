@@ -19,3 +19,5 @@ and numerous browsers do not support sockets.  Chrome is recommended for running
 The port for the arduino changes every time it's physically disconnected/reconnected.
 Before starting server.js, ensure that the devicePath variable in the file matches
 the serial port listed for the arduino in the IDE (Tools>Port>/dev/cu.usbmodem<somenumber>)
+
+If running from a PC, use "npm run start-pc" to start the frontend

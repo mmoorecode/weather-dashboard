@@ -78,5 +78,85 @@
         "latitude": 45.676998,
         "longitude": -111.042931,
         "sensor_data_available": false
+    },
+    {
+        "id": 10,
+        "city": "Takoma Park",
+        "state": "MD",
+        "latitude": 38.981544,
+        "longitude": -77.010674,
+        "sensor_data_available": false
+    },
+    {
+        "id": 11,
+        "city": "Augusta",
+        "state": "ME",
+        "latitude": 44.331493,
+        "longitude": -69.788994,
+        "sensor_data_available": false
+    },
+    {
+        "id": 12,
+        "city": "Gretna",
+        "state": "LA",
+        "latitude": 29.916653,
+        "longitude": -90.057854,
+        "sensor_data_available": false
+    },
+    {
+        "id": 13,
+        "city": "Paris",
+        "state": "KY",
+        "latitude": 38.206348,
+        "longitude": -84.270172,
+        "sensor_data_available": false
+    },
+    {
+        "id": 14,
+        "city": "Grinnell",
+        "state": "IA",
+        "latitude": 41.746952,
+        "longitude": -92.729362,
+        "sensor_data_available": false
+    },
+    {
+        "id": 15,
+        "city": "New Castle",
+        "state": "DE",
+        "latitude": 39.668564,
+        "longitude": -75.586189,
+        "sensor_data_available": false
+    },
+    {
+        "id": 16,
+        "city": "Camden",
+        "state": "AR",
+        "latitude": 33.586617,
+        "longitude": -92.842979,
+        "sensor_data_available": false
+    },
+    {
+        "id": 17,
+        "city": "Mannford",
+        "state": "OK",
+        "latitude": 36.133411,
+        "longitude": -96.354454,
+        "sensor_data_available": false
+    },
+    {
+        "id": 18,
+        "city": "Youngstown",
+        "state": "OH",
+        "latitude": 41.102970,
+        "longitude": -80.647247,
+        "sensor_data_available": false
+    },
+    {
+        "id": 19,
+        "city": "Norfolk",
+        "state": "VA",
+        "latitude": 36.850769,
+        "longitude": -76.285873,
+        "sensor_data_available": false
     }
 ]

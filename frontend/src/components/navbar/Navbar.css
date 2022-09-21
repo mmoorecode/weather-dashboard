@@ -7,10 +7,23 @@
     background-color: var(--darkest);
 }
 
+.vertical_align {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .header {
     padding: 0em;
     margin: .40em;
+    margin-bottom: .20em;
     font-size: 1.80rem;
+    color: var(--lighter);
+}
+.subheader {
+    padding: 0em;
+    margin: .40em;
+    margin-top: .20em;
+    font-size: 1.50rem;
     color: var(--lighter);
 }
 
@@ -28,6 +41,7 @@
     font-weight: bold;
     color: var(--mid);
     background-color: var(--lightest);
+    white-space: nowrap;
 }
 
 .tab:hover {

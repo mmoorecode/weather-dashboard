@@ -1,0 +1,82 @@
+[
+    {
+        "id": 0,
+        "city": "Pittsburgh",
+        "state": "PA",
+        "latitude": 40.440624,
+        "longitude": -79.995888,
+        "sensor_data_available": true
+    },
+    {
+        "id": 1,
+        "city": "Holyoke",
+        "state": "MA",
+        "latitude": 42.203217,
+        "longitude": -72.625481,
+        "sensor_data_available": false
+    },
+    {
+        "id": 2,
+        "city": "Sterling",
+        "state": "CO",
+        "latitude": 40.626743,
+        "longitude": -103.217026,
+        "sensor_data_available": false
+    },
+    {
+        "id": 3,
+        "city": "Miami Beach",
+        "state": "FL",
+        "latitude": 25.793449,
+        "longitude": -80.139198,
+        "sensor_data_available": false
+    },
+    {
+        "id": 4,
+        "city": "Globe",
+        "state": "AZ",
+        "latitude": 33.395844,
+        "longitude": -110.793739,
+        "sensor_data_available": false
+    },
+    {
+        "id": 5,
+        "city": "South San Francisco",
+        "state": "CA",
+        "latitude": 37.662937,
+        "longitude": -122.433014,
+        "sensor_data_available": false
+    },
+    {
+        "id": 6,
+        "city": "Utica",
+        "state": "NY",
+        "latitude": 43.107204,
+        "longitude": -75.252312,
+        "sensor_data_available": false
+    },
+    {
+        "id": 7,
+        "city": "Odessa",
+        "state": "TX",
+        "latitude": 31.845682,
+        "longitude": -102.367645,
+        "sensor_data_available": false
+    },
+    {
+        "id": 8,
+        "city": "Sturgis",
+        "state": "SD",
+        "latitude": 44.409706,
+        "longitude": -103.509079,
+        "sensor_data_available": false
+    },
+    {
+        "id": 9,
+        "city": "Bozeman",
+        "state": "MT",
+        "latitude": 45.676998,
+        "longitude": -111.042931,
+        "sensor_data_available": false
+    }
+]

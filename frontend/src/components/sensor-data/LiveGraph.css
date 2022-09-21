@@ -1,19 +1,22 @@
-.card {
+.container {
     border-radius: 25px;
     /* border: 5px solid var(--lightest); */
     background: lightgray;
     margin: 10px;
     padding: 5px;
-    flex: auto;
+    /* flex: auto; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     /* align-content: flex-start; */
-  }
+}
 
-  .graphHeader {
-      margin: 10px;
-      text-align: center;
-  }
+.graphHeader {
+    margin: 10px;
+    text-align: center;
+}
 
-  .lineChart {
-      height: 75em;
-      width: 75em;
-  }
+.responsiveContainer {
+    display: flex;
+    flex-wrap: wrap;
+}

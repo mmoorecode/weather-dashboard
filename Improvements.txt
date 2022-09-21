@@ -1,0 +1,16 @@
+Notes for potential future additions to this project:
+
+- Provide option to connect/disconnect from the arduino via a socket event
+emitted from the client side
+- Have the server scan for the arduino connection rather than manually
+inputting it each time.
+- Add a Config tab for changing the settings for the arduino connection
+(i.e. have a text box where the user can enter the port to connect to the arduino,
+make the baud rate configurable via a numeric dropdown)
+- Move location data into an overarching application context so global data is easier
+to propagate throughout the components
+- Get more location data and move it from the JSON file into a db where it can be queried
+rather than loaded all at once at runtime
+- Add more options for viewing the data (i.e. add option to view data for a given timespan,
+add dropdown to change the interval/count of tick marks on the x axis)
+- Add more comprehensive test coverage

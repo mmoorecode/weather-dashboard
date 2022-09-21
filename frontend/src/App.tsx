@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import './App.css';
 import Radar from './components/radar/Radar';
 import SensorData from './components/sensor-data/SensorData';
-import Navbar, { SENSOR_DATA_TAB_ID, RADAR_TAB_ID } from './components/navbar/Navbar';
+import Navbar, { SENSOR_DATA_TAB_ID, RADAR_TAB_ID, LOCATIONS_TAB_ID } from './components/navbar/Navbar';
+import Locations from './components/locations/Locations';
 
 export type Tab = {
     id: string
@@ -47,6 +48,10 @@ function App() {
       case RADAR_TAB_ID:
         return (
           <Radar latitude={currentLocation.latitude} longitude={currentLocation.longitude}/>
+        );
+      case LOCATIONS_TAB_ID:
+        return (
+          <Locations/>
         );
     }
   }
